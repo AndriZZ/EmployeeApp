@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        app:cardElevation="0dp"
+        app:cardBackgroundColor="@android:color/transparent"
+        android:background="@drawable/transparent"
+        android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <ImageView
+                android:id="@+id/kudo_comment_balloon"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:src="@drawable/ic_kudos_bg"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="8dp"
+                android:contentDescription="@string/placeholder"
+                app:layout_constraintTop_toTopOf="parent"/>
+        <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/kudo_circleImage"
+                android:layout_width="32dp" android:layout_height="32dp"
+                android:src="@drawable/crystal"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toTopOf="@+id/kudo_comment_balloon"
+                app:layout_constraintStart_toStartOf="@+id/kudo_comment_balloon"
+                android:layout_marginStart="8dp"
+        />
+        <TextView
+                android:id="@+id/kudo_comment_details"
+                android:text="@string/default_employee_name"
+                android:textColor="#FF8794A8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:layout_constraintTop_toBottomOf="@+id/kudo_comment_balloon"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="16dp"/>
+
+        <TextView
+                android:id="@+id/kudo_comment"
+                android:text="@string/kudos_string"
+                android:layout_width="264dp"
+                android:layout_height="58dp"
+                android:maxLines="3"
+                android:ellipsize="end"
+                android:lineSpacingExtra="4sp"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/roboto"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/kudo_circleImage" android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toEndOf="@+id/kudo_comment_balloon" android:layout_marginEnd="16dp"
+                app:layout_constraintTop_toTopOf="@+id/kudo_comment_balloon"
+                app:layout_constraintBottom_toBottomOf="@+id/kudo_comment_balloon" android:layout_marginTop="8dp"
+                android:layout_marginBottom="16dp"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

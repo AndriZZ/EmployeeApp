@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="527dp" android:id="@+id/constraintLayout2">
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            android:id="@+id/imageHolder" app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+                android:id="@+id/training_image"
+                android:layout_width="match_parent" android:layout_height="match_parent"
+                android:src="@drawable/ic_earth"
+                android:scaleType="fitCenter"
+                android:contentDescription="@string/image_name"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="0dp" app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="0dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+            android:id="@+id/training_name"
+            android:text="@string/mm_essentials"
+            android:textSize="16sp"
+            android:fontFamily="@font/roboto"
+            android:textColor="#FF1D2C3D"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            app:layout_constraintTop_toBottomOf="@+id/imageHolder" android:layout_marginStart="16dp"
+            app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+            android:id="@+id/training_kingdom"
+            android:text="@string/earth_kingdom"
+            android:fontFamily="@font/roboto"
+            android:textSize="12sp"
+            android:textColor="#FFFFD346"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="5dp" app:layout_constraintTop_toBottomOf="@+id/training_name"/>
+    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            app:cpb_progress="50"
+            app:cpb_background_progressbar_color="#FFEBE9E9"
+            app:cpb_background_progressbar_width="4dp"
+            app:cpb_progressbar_color="#F44336"
+            app:cpb_progressbar_width="4dp"
+            android:id="@+id/circularProgressBar"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp" app:layout_constraintTop_toBottomOf="@+id/imageHolder"/>
+    <TextView
+            android:layout_width="34dp"
+            android:layout_height="16dp"
+            android:id="@+id/textPercentage"
+            android:textAlignment="center"
+            android:textColor="#FF14254A"
+            android:fontFamily="@font/roboto"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            app:layout_constraintTop_toTopOf="@+id/circularProgressBar"
+            app:layout_constraintBottom_toBottomOf="@+id/circularProgressBar"
+            app:layout_constraintStart_toStartOf="@+id/circularProgressBar"
+            app:layout_constraintEnd_toEndOf="@+id/circularProgressBar"/>
+
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#1F000000"
+            android:id="@+id/decorative_line"
+            android:layout_marginTop="218dp"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="8dp" app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="8dp"/>
+    <TextView
+            android:text="@string/events"
+            android:textAllCaps="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/events"
+            app:layout_constraintTop_toBottomOf="@+id/decorative_line" android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:id="@+id/first_item"
+            android:layout_height="42dp"
+            app:layout_constraintTop_toBottomOf="@+id/events"
+            android:layout_marginTop="13dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp">
+        <TextView
+                android:text="@string/course_name"
+                android:layout_width="180dp"
+                android:layout_height="32dp"
+                android:id="@+id/first_course_name"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="8dp"/>
+        <TextView
+                android:text="@string/not_started"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/first_completion_text"
+                app:layout_constraintEnd_toStartOf="@+id/first_completion_bar"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="8dp"/>
+        <ImageView
+                android:contentDescription="@string/placeholder"
+                android:layout_width="4dp"
+                android:background="#FFD3DFEB"
+                android:layout_height="32dp"
+                android:id="@+id/first_completion_bar"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+        />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:id="@+id/second_item"
+            app:layout_constraintTop_toBottomOf="@+id/first_item"
+            android:layout_marginTop="3dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp">
+        <TextView
+                android:text="@string/course_name"
+                android:layout_width="180dp"
+                android:layout_height="32dp"
+                android:id="@+id/second_course_name"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+                android:text="@string/not_started"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/second_completion_text"
+                app:layout_constraintEnd_toStartOf="@+id/second_completion_bar"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="8dp"/>
+        <ImageView
+                android:contentDescription="@string/placeholder"
+                android:layout_width="4dp"
+                android:background="#FFD3DFEB"
+                android:layout_height="32dp"
+                android:id="@+id/second_completion_bar"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+        />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:id="@+id/third_item"
+            app:layout_constraintTop_toBottomOf="@+id/second_item"
+            android:layout_marginTop="3dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp">
+        <TextView
+                android:text=""
+                android:layout_width="160dp"
+                android:layout_height="32dp"
+                android:id="@+id/third_course_name"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"/>
+        <TextView
+                android:text="@string/not_started"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/third_completion_text"
+                app:layout_constraintEnd_toStartOf="@+id/third_completion_bar"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="8dp"/>
+        <ImageView
+                android:contentDescription="@string/placeholder"
+                android:layout_width="4dp"
+                android:background="#FFD3DFEB"
+                android:layout_height="32dp"
+                android:id="@+id/third_completion_bar"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+        />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:id="@+id/forth_item"
+            app:layout_constraintTop_toBottomOf="@+id/third_item"
+            android:layout_marginTop="3dp"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+            app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="16dp">
+        <TextView
+                android:text=""
+                android:layout_width="180dp"
+                android:layout_height="32dp"
+                android:id="@+id/forth_course_name"
+                android:layout_marginTop="8dp" app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+        />
+        <TextView
+                android:text="@string/not_started"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/forth_completion_text"
+                app:layout_constraintEnd_toStartOf="@+id/forth_completion_bar"
+                android:layout_marginEnd="16dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginTop="8dp"/>
+        <ImageView
+                android:contentDescription="@string/placeholder"
+                android:layout_width="4dp"
+                android:background="#FFD3DFEB"
+                android:layout_height="32dp"
+                android:id="@+id/forth_completion_bar"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+        />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+            android:text="@string/okay"
+            android:background="@drawable/ripple"
+            android:textColor="@color/colorPrimary"
+            android:layout_width="82dp"
+            android:layout_height="36dp"
+            android:id="@+id/okay_button" android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="10dp" android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@+id/forth_item"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://schemas.android.com/apk/res-auto"
+      xmlns:tools="http://schemas.android.com/tools"
+      tools:context="com.mentormate.mentornet.ui.activity.MainActivity"
+>
+    <item
+            android:id="@+id/add_kudo"
+            android:orderInCategory="300"
+            android:title="@string/kudos_string"
+            android:icon="@drawable/ic_add_kudo"
+            app:showAsAction="always">
+    </item>
+
+</menu>
+

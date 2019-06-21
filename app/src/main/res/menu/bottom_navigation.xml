@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<item
+        android:id="@+id/boardsTab"
+        android:enabled="true"
+        android:title="@string/boards_string"
+        android:icon="@drawable/boards_icon"/>
+<item
+        android:id="@+id/kudosTab"
+        android:enabled="true"
+        android:title="@string/kudos_string"
+        android:icon="@drawable/ic_feedback_white_24dp"/>
+<item
+        android:id="@+id/peopleTab"
+        android:enabled="true"
+        android:title="@string/people_string"
+        android:icon="@drawable/ic_people_white_24dp"
+/>
+<item
+        android:id="@+id/profileTab"
+        android:enabled="true"
+        android:title="@string/profile_string"
+        android:icon="@drawable/ic_account_circle_black_24dp"
+/>
+</menu>

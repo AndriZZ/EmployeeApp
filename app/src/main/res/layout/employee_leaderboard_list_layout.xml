@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                                   xmlns:app="http://schemas.android.com/apk/res-auto"
+                                                   xmlns:tools="http://schemas.android.com/tools"
+                                                   android:orientation="vertical"
+                                                   android:layout_width="match_parent"
+                                                   android:layout_height="60dp"
+                                                   android:background="@drawable/ripple">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/employee_avatar"
+            android:src="@drawable/ic_account_circle_black_24dp"
+            tools:ignore="contentDisposition"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="7dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:transitionName="@string/employee_avatar_shared_transition_key"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp">
+
+    </de.hdodenhof.circleimageview.CircleImageView>
+
+    <TextView
+            android:id="@+id/employee_name"
+            android:height="19dp"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:lineSpacingMultiplier="1.19"
+            android:text="@string/default_employee_name"
+            android:textSize="16sp"
+            android:fontFamily="@font/roboto"
+            android:transitionName="@string/employee_name_shared_transition_key"
+            app:layout_constraintStart_toEndOf="@+id/employee_avatar"
+            android:layout_marginStart="16dp" android:textStyle="bold" android:layout_marginTop="5dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/employee_position_in_city"/>
+
+    <TextView
+            android:id="@+id/employee_position_in_city"
+            android:minLines="1"
+            android:maxLines="2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:lineSpacingMultiplier="1.17"
+            android:maxWidth="200dp"
+            android:text="@string/default_position_and_city"
+            android:transitionName="@string/employee_position_shared_transition_key"
+            app:layout_constraintTop_toBottomOf="@+id/employee_name"
+            app:layout_constraintStart_toEndOf="@+id/employee_avatar"
+            android:layout_marginStart="16dp"
+            android:layout_marginBottom="8dp"
+            android:textColor="#FF8794A8"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:fontFamily="@font/roboto" android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toStartOf="@+id/crystals" app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintVertical_bias="0.666"/>
+
+    <ImageView
+            android:layout_width="17dp"
+            android:layout_height="13dp"
+            android:src="@drawable/crystal"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="16dp" app:layout_constraintTop_toTopOf="parent" android:layout_marginTop="24dp"
+            app:layout_constraintBottom_toBottomOf="parent" android:layout_marginBottom="23dp"
+            android:id="@+id/crystal"
+            android:contentDescription="@string/crystals_string"/>
+    <TextView
+            tools:text="10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/crystals" app:layout_constraintEnd_toStartOf="@+id/crystal"
+            android:layout_marginEnd="8dp" android:layout_marginTop="22dp" app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="22dp" app:layout_constraintBottom_toBottomOf="parent"/>
+    <TextView
+            android:id="@+id/employee_leader_board_position"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:text="@string/first"
+            android:gravity="center"
+            android:textSize="10sp"
+            android:background="@drawable/rounded_text_view"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/employee_avatar"
+            app:layout_constraintStart_toStartOf="@+id/employee_avatar" tools:ignore="SmallSp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

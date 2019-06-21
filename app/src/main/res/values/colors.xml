@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF04A8F5</color>
+    <color name="colorPrimaryDark">#14264A</color>
+    <color name="colorAccent">#04A8F5</color>
+    <color name="colorTextDark">#FF1D2C3D</color>
+    <color name="colorFadedDark">#61000000</color>
+    <color name="fadedWhite">#3CFFFFFF</color>
+    <color name="fadedRed">#FFFC788F</color>
+    <color name="fadedYellow">#FFFFD346</color>
+    <color name="fadedPurple">#FF8183FF</color>
+    <color name="fadedBlue">#FF25CCF6</color>
+    <color name="client_dark">#F5F6FB</color>
+
+</resources>

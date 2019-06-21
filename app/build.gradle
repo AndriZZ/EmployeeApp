@@ -1,0 +1,133 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    signingConfigs {
+        config {
+            storeFile file("$rootDir/app/ourkey.jks")
+            keyAlias 'mentornet'
+            keyPassword 'mentornet'
+            storePassword 'mentornet'
+        }
+    }
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.mentormate.mentornet"
+        minSdkVersion 23
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        debug {
+            signingConfig signingConfigs.config
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.core:core-ktx:1.1.0-alpha05'
+
+    implementation "androidx.legacy:legacy-support-v4:$rootProject.legacySupportVersion"
+    kapt "androidx.room:room-compiler:$rootProject.roomVersion"
+    implementation "androidx.room:room-runtime:$rootProject.roomVersion"
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:$rootProject.kotlinVersion"
+    implementation "androidx.appcompat:appcompat:$rootProject.supportLibraryVersion"
+    implementation "androidx.constraintlayout:constraintlayout:$rootProject.constraintLayoutVersion"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$rootProject.coroutinesVersion"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$rootProject.coroutinesVersion"
+
+    implementation "com.android.support:design:$rootProject.androidSupportDesign"
+    implementation "com.google.android.material:material:$rootProject.androidDesign"
+
+    //RecyclerView
+    implementation "androidx.recyclerview:recyclerview:$rootProject.recyclerViewVersion"
+
+    //Glide dependency
+    implementation "com.github.bumptech.glide:glide:$rootProject.glideVersion"
+    annotationProcessor "com.github.bumptech.glide:compiler:$rootProject.glideVersion"
+
+    //CardView
+    implementation "androidx.cardview:cardview:$rootProject.cardViewVersion"
+
+    //Firebase
+    implementation "com.google.firebase:firebase-crash:$rootProject.firebaseCrashVersion"
+    implementation "com.google.firebase:firebase-database:$rootProject.firebaseDatabaseVersion"
+
+    //CircleImageView
+    implementation "de.hdodenhof:circleimageview:$rootProject.circleImageView"
+
+    //Navigation
+    implementation "android.arch.navigation:navigation-fragment-ktx:$rootProject.navigation"
+    implementation "android.arch.navigation:navigation-ui-ktx:$rootProject.navigation"
+
+    //Arch
+    implementation "android.arch.lifecycle:extensions:$rootProject.arch"
+    kapt "android.arch.lifecycle:compiler:$rootProject.arch"
+
+    //Dagger
+    implementation "com.google.dagger:dagger-android:$rootProject.daggerVersion"
+    implementation "com.google.dagger:dagger-android-support:$rootProject.daggerVersion"
+    kapt "com.google.dagger:dagger-android-processor:$rootProject.daggerVersion"
+    kapt "com.google.dagger:dagger-compiler:$rootProject.daggerVersion"
+
+    //Rx Android/Java
+    implementation "io.reactivex.rxjava2:rxandroid:$rootProject.rxAndroid"
+    implementation "io.reactivex.rxjava2:rxjava:$rootProject.rxJava"
+
+    //Android KTX
+    implementation "androidx.core:core-ktx:$rootProject.ktx"
+
+    //AndroidView animations
+    implementation "com.daimajia.easing:library:$rootProject.animationsEasingVersion"
+    implementation "com.daimajia.androidanimations:library:$rootProject.animationsVersion"
+
+    // Test dependencies
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation "androidx.arch.core:core-testing:$rootProject.coreTestingVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-contrib:$rootProject.espressoVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$rootProject.espressoVersion"
+    androidTestImplementation "androidx.test.espresso:espresso-intents:$rootProject.espressoVersion"
+    androidTestImplementation "androidx.test.uiautomator:uiautomator:$rootProject.uiAutomatorVersion"
+
+    //Firebase
+    implementation "com.google.firebase:firebase-auth:$rootProject.firebaseAuthVersion"
+    implementation "com.google.firebase:firebase-core:$rootProject.firebaseCoreVersion"
+    implementation "com.google.firebase:firebase-messaging:$rootProject.firebaseMessagingVersion"
+    implementation "com.google.firebase:firebase-database:$rootProject.firebaseDatabaseVersion"
+
+    //GooglePlay
+    implementation "com.google.android.gms:play-services-auth:$rootProject.playServicesVersion"
+
+    //Retrofit
+    implementation "com.squareup.retrofit2:retrofit:$rootProject.retroFitVersion"
+    implementation "com.squareup.retrofit2:converter-gson:$rootProject.retroFitVersion"
+    implementation "com.squareup.retrofit2:converter-scalars:$rootProject.scalirsVersion"
+
+    //WorkManager
+    implementation "android.arch.work:work-runtime:$rootProject.workManagerVersion"
+
+    //SafeRoom
+    implementation "com.commonsware.cwac:saferoom:$rootProject.safeRoomVersion"
+
+    //ViewPager
+    implementation "androidx.viewpager:viewpager:$rootProject.viewPager"
+
+    //circleProgress
+    implementation 'com.mikhaellopez:circularprogressbar:2.0.0'
+
+}

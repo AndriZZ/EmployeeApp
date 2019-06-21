@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/main_navgraph" app:startDestination="@id/boardsFragment">
+
+    <fragment android:id="@+id/employeeListFragment"
+              android:name="com.mentormate.mentornet.ui.fragment.PeopleFragment"
+              android:label="EmployeeListFragment"/>
+
+    <fragment android:id="@+id/boardsFragment"
+              android:name="com.mentormate.mentornet.ui.fragment.BoardsFragment"
+              android:label="BoardsFragment"/>
+
+    <fragment android:id="@+id/kudosFragment"
+              android:name="com.mentormate.mentornet.ui.fragment.KudosFragment"
+              android:label="KudosFragment"/>
+
+    <fragment android:id="@+id/profileFragment"
+              android:name="com.mentormate.mentornet.ui.fragment.ProfileFragment"
+              android:label="ProfileFragment"/>
+
+    <action android:id="@+id/action_global_employeeListFragment"
+            app:destination="@id/employeeListFragment"/>
+    <action android:id="@+id/action_global_boardsFragment"
+            app:destination="@id/boardsFragment"/>
+    <action android:id="@+id/action_global_kudosFragment"
+            app:destination="@id/kudosFragment"/>
+    <action android:id="@+id/action_global_profileFragment"
+            app:destination="@id/profileFragment"/>
+
+
+</navigation>

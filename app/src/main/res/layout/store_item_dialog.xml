@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:cardview="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/dialog_view"
+        android:clickable="false"
+        android:focusable="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_gravity="center_horizontal"
+        cardview:cardCornerRadius="20dp"
+>
+
+
+    <ImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/store_item_image"
+            android:scaleType="matrix"
+            android:layout_height="228dp"
+            android:layout_width="match_parent"
+            android:contentDescription="@string/placeholder"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+            android:id="@+id/crystal"
+            android:layout_width="24dp"
+            android:layout_height="18.33dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="@string/crystals_string"
+            android:layout_marginStart="16dp" cardview:layout_constraintStart_toStartOf="parent"
+            android:layout_marginTop="8dp"
+            cardview:layout_constraintTop_toBottomOf="@+id/item_name"
+    />
+    <TextView
+            android:id="@+id/item_name"
+            android:text="@string/item_name"
+            android:fontFamily="@font/roboto"
+            android:textColor="@color/colorTextDark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="26sp"
+            android:layout_marginTop="8dp" cardview:layout_constraintTop_toBottomOf="@+id/store_item_image"
+            android:layout_marginStart="16dp" cardview:layout_constraintStart_toStartOf="parent"
+    />
+    <TextView
+            android:text="@string/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/item_crystal_price"
+            android:fontFamily="@font/roboto"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/colorTextDark"
+            android:layout_marginEnd="8dp"
+            cardview:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="4dp"
+            cardview:layout_constraintTop_toBottomOf="@+id/item_name"
+            cardview:layout_constraintStart_toEndOf="@+id/crystal" android:layout_marginStart="8dp"
+            cardview:layout_constraintHorizontal_bias="0.0"/>
+    <Button
+            android:foreground="?android:attr/selectableItemBackgroundBorderless"
+            android:background="@drawable/transparent"
+            android:text="@string/view_store_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:textSize="14sp"
+            android:id="@+id/button"
+            cardview:layout_constraintStart_toStartOf="parent" android:layout_marginStart="16dp"
+            android:layout_marginTop="4dp" cardview:layout_constraintTop_toBottomOf="@+id/crystal"
+            android:layout_marginBottom="8dp" cardview:layout_constraintBottom_toBottomOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
